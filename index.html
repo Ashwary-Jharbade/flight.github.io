@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Flight Search Engine</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./css/index.css" rel="stylesheet">
+        <link rel="icon" type="image/jpg" href="https://images.unsplash.com/photo-1545132147-d037e6c54cfd?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fHBsYW5lfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60">
+    </head>
+    <body>
+    <div class="cover">   
+        <section>
+            <nav>
+                <div class="lato300 navdiv">
+                    <b>Flight Search Engine</b>
+                </div>
+            </nav>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="sideSection">
+                    <div class="">
+                        <div class="menu_button_container">
+                            <button type="button" id="onebut" onclick="oneway()">One way</button>
+                            <button type="button" id="twobut" onclick="twoway()">Return</button>
+                        </div>
+                        <div class="form_container">
+                            <form class="form_style" name="form" onsubmit="return flightSearch(event)">
+                                <div class="form-div">
+                                    <input list="city" type="search" name="origin" placeholder="Enter Origin City" required="True" autocomplete="off" />
+                                </div>
+                                <div class="form-div">
+                                    <input list="city" type="search" name="destination" placeholder="Enter Destination City" required="True" autocomplete="off" />
+                                </div>
+                                <datalist id="city">
+                                    <option value="Pune"></option>
+                                    <option value="Delhi"></option>
+                                </datalist> 
+                                <div class="form-div">
+                                    <input id="oneways"  class="styleDateField" placeholder="Depart Date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" min="2021-07-14" max="2021-12-31" name="departure_date" required="True" />   
+                                </div>
+                                <div class="form-div">
+                                    <input id="returnid" class="styleDateField" placeholder="Return Date" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" min="2021-07-14" max="2021-12-31" name="return_date" required="True" />   
+                                </div>
+                                <div class="form-div">
+                                    <select name="passenger" required>
+                                        <option value="" selected disabled>Passengers</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="2">3</option>
+                                        <option value="2">4</option>
+                                        <option value="2">5</option>
+                                    </select>
+                                </div>
+                                <div class="form-div">
+                                    <button class="searchButton" name="search" type="submit">Search</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="price_slider_container">
+                            <div class="slider_heading">
+                                <span>Refine Flight Search</span>
+                            </div>
+                            <div class="slider_container">
+                                <div align="center" class="slider_counter">
+                                    <p >Max. Price - Rs. <span id="price_meter"></span> </p>
+                                </div>
+                                <div class="slider_box">
+                                    <input list="tickmarks" id="sliderId" type="range" min="1000" max="10000" step="500" value="5000" class="slider" onchange="priceChange(this)"/>
+                                    <datalist id="tickmarks">
+                                        <option value="1000"></option>
+                                        <option value="1500"></option>
+                                        <option value="2000"></option>
+                                        <option value="2500"></option>
+                                        <option value="3000"></option>
+                                        <option value="3500"></option>
+                                        <option value="4000"></option>
+                                        <option value="4500"></option>
+                                        <option value="5000"></option>
+                                        <option value="5500"></option>
+                                        <option value="6000"></option>
+                                        <option value="6500"></option>
+                                        <option value="7000"></option>
+                                        <option value="7500"></option>
+                                        <option value="8000"></option>
+                                        <option value="8500"></option>
+                                        <option value="9000"></option>
+                                        <option value="9500"></option>
+                                        <option value="10000"></option>
+                                    </datalist>
+                                </div>
+                                <div class="slider_scale">
+                                    <div style="display:inline-flex;width:100%;">
+                                        <div style="width:20%;" align="left">
+                                            1k
+                                        </div>
+                                        <div style="width:20%;"align="left">
+                                           
+                                        </div>
+                                        <div style="width:20%;" align="left">
+                                            5k
+                                        </div>
+                                        <div style="width:20%;" align="left">
+                                            
+                                        </div>
+                                        <div style="width:20%;" align="center">
+                                            10k
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mainSection">
+                    <div class="result_container">
+                        <div class="resultFor">
+                            <div class="stationDetails">
+                                <span id="locations" class="searched">Origin > Destination</span>
+                            </div>
+                            <div class="timeDetails">
+                                <span id="depart">  </span>
+                                <br>
+                                <span id="return"> </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_container" id="showlist">
+                        <div id="proxy_image">
+                            <img  src="./images/travel.svg"  alt="proxy_image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div> 
+
+    <script src="./js/index.js"></script>
+    </body>
+</html>

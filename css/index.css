@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+:root{
+    --backgroundColor: #edf2f9;
+    --buttonColor: #0150ab;
+    --whiteback: #fff;
+    --darkButtonColor:#003b80;
+    --orangedark:#d5371b;
+    --orangelight:#e7801e;
+}
+
+body{ 
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    background-color: var(--backgroundColor);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* styling placeholder */
+input::placeholder{
+    color: var(--buttonColor);
+}
+
+input::-moz-placeholder{
+    color: var(--buttonColor);
+}
+
+input::-ms-input-placeholder{
+    color: var(--buttonColor);
+}
+
+/* For page maintainability on zooming out */
+.cover{
+    max-width:1800px;margin:auto;
+}
+
+/* page header */
+nav{
+    width: 100%;
+    background-color:var(--whiteback);
+}
+
+.navdiv{
+    padding: 20px;
+    font-size: 27px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    color: var(--buttonColor);
+}
+
+/* container for two partitions */
+.container{
+    width:100%;
+    display: inline-flex;
+}
+
+.sideSection{
+    width:25%;
+}
+
+.mainSection{
+    width:75%;
+}
+
+/* Menu buttons styling */
+.menu_button_container{
+    margin: 15px 20px 0 20px;
+}
+
+.menu_button_container button{
+    border-radius: 5px 5px 0 0;
+    border-color: transparent;
+    background-color: white;
+    color: var(--buttonColor);
+}
+
+.menu_button_container button:first-child{
+    color: white;
+    background-color: var(--buttonColor);
+}
+
+.menu_button_container button:focus-within{
+    background-color: var(--darkButtonColor);
+}
+
+/* from container styling */
+.form_container{
+    margin:0px 20px 20px 20px;
+    padding: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: var(--whiteback);
+    border-radius: 0 10px 10px 10px;
+}
+
+.form_style input[type="search"]{
+    margin: 0px 0px 15px 0px;
+    width: 100% !important;
+    height: 38px;
+    font-size: 16px;
+    color:var(--buttonColor);
+    background-color:transparent;
+    border-radius: 5px;
+    border: 1.5px solid var(--buttonColor);
+    outline: none;
+    transition: 500ms linear;
+}
+
+.form-div{
+    margin:5px;
+}
+
+.form-flex{
+    display: block;
+    width: 100% !important;
+}
+
+/* date filed styling */
+.form_style .styleDateField{
+    margin: 0px 0px 15px 0px;
+    width: 98%;
+    height: 35px;
+    font-size: 16px;
+    color:var(--buttonColor);
+    background-color:transparent;
+    border-radius: 5px;
+    border: 1.5px solid var(--buttonColor);
+    outline: none;
+    background:transparent url(../images/icon1.png)  97% 50% no-repeat ;
+}
+
+.form_style .styleDateField:focus-within{
+    height: 37px !important;
+    width: 99% !important;
+}
+
+.form_style .styleDateField::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+
+.form_style .styleDateField::-webkit-inner-spin-button {
+    display: none;
+}
+
+/* passenger select filed styling */
+.form_style select{
+    margin: 0px 0px 15px 0px;
+    width: 100%;
+    height: 38px !important;
+    font-size: 16px;
+    color:var(--buttonColor);
+    margin: 0px 0px 15px 0px;
+    height: 35px;
+    font-size: 16px;
+    color:var(--buttonColor);
+    background-color:transparent;
+    border-radius: 5px;
+    border: 1.5px solid transparent;
+    border-color:var(--buttonColor);
+    outline: none;
+}
+
+/* search button styling */
+.searchButton{
+    margin-top: 0px;
+    height: 35px;
+    font-size: 16px;
+    background-color: var(--buttonColor);
+    border-color: transparent;
+    width: 80px;
+    color: white;
+    border-radius: 5px;
+    outline: none;
+}
+
+.searchButton:hover{
+    box-shadow: var(--buttonColor) 0px 0px 1px 1px;
+    transition: 50ms linear;
+}
+
+.searchButton:focus{
+    background-color: var(--darkButtonColor);
+}
+
+/* slider block styling */
+.price_slider_container{
+    margin:20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: var(--whiteback);
+    border-radius: 10px 10px 10px 10px;
+    color: var(--buttonColor);
+}
+
+.slider_heading{
+    padding: 5px 0 0 7px;
+    color: var(--orangedark);
+    font-weight: bold;
+}
+
+.slider_container{
+    margin: 5px;
+    padding-bottom: 10px;
+}
+
+.slider_counter p{
+    margin: 15px 0 0 0;
+}
+
+.slider_box{
+    width: 100%;
+}
+
+.slider_scale{
+    position: relative;
+    top:-15px;
+}
+
+.slider{
+    padding: 15px;
+    width: 85%;
+    -webkit-appearance: none;
+    outline: none;
+}
+
+.slider::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 7px;
+    cursor: pointer;
+    background: var(--buttonColor);
+    border-radius: 5px;
+}
+
+.slider::-webkit-slider-thumb {
+    position: relative;
+    top: 10px;
+    height: 16px;
+    width: 16px;
+    border-radius: 100%;
+    background: var(--darkButtonColor);
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -14px;
+    border-color: transparent;
+}
+
+.slider:focus::-webkit-slider-runnable-track {
+    background: var(--buttonColor);
+}
+
+.slider::-moz-range-track {
+    width: 100%;
+    height: 7px;
+    cursor: pointer;
+    background: var(--buttonColor);
+    border-radius: 5px;
+}
+
+.slider::-moz-range-thumb {
+    position: relative;
+    top: 10px;
+    height: 16px;
+    width: 16px;
+    border-radius: 100%;
+    background: var(--darkButtonColor);
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -14px;
+    border-color: transparent;
+}
+
+.slider::-ms-track {
+    width: 100%;
+    height: 7px;
+    cursor: pointer;
+    background: var(--buttonColor);
+    border-radius: 5px;
+}
+
+.slider::-ms-thumb {
+    position: relative;
+    top: 10px;
+    height: 16px;
+    width: 16px;
+    border-radius: 100%;
+    background: var(--darkButtonColor);
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -14px;
+    border-color: transparent;
+}
+
+
+/* Right side Result section styling */
+.resultFor{
+    background-image:linear-gradient(-45deg,#014ba7,#0183d0);
+    display: inline-flex;
+    width: 100%;
+    color: white;
+}
+
+.searched{
+    font-size: 20px;
+}
+
+.stationDetails{
+    width: 70%;
+    padding: 15px;
+}
+
+.timeDetails{
+    width: 30%;
+    padding: 15px;
+}
+
+/* image styling */
+#proxy_image{
+    margin: 40px auto;
+    width: 60%;
+}
+
+img{
+    width:100%;
+}
+
+/* empty result text styling*/
+.emptyResult{
+    padding: auto;
+    color: var(--orangedark);
+}
+
+
+/* flight cards styling */
+.flight_cards{
+    margin:20px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: var(--whiteback);
+}
+
+.card_container{
+    display: inline-flex;
+    width: 100%;
+}
+
+.booking_details{
+    display: inline-flex;
+    width: 100%;
+}
+
+.left-content{
+    width:70%;
+}
+
+.right-content{
+    width:30%;
+    margin: auto;
+}
+
+.oneway{
+    width: 50%;
+}
+
+.twoway{
+    width: 50%;
+}
+
+.book-flight{
+    background-image: linear-gradient(45deg,#d5371b,#e7801e);
+    background-color: var(--buttonColor);
+    border-color: transparent;
+    height: 35px;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 5px;
+    color: white;
+    border-radius: 5px;
+}
+
+.book-flight:hover{
+    box-shadow: var(--orangedark) 0px 0px 1px 1px;
+    transition: 50ms linear;
+}
+
+.book-flight:focus{
+    background-color: var(--darkButtonColor);
+}
+
+.booking_details p{
+    font-size: 19px;
+    color: #003b80;
+}
+
+.oneway small{
+    color: var(--orangedark);
+    font-size: 15px;
+}
+
+.twoway small{
+    color: var(--orangedark);
+    font-size: 15px;
+}
+
+.price-box h2{
+    color: var(--orangedark);
+}
+
+.button-content{
+    display: inline-block;
+}
+
+.button-icon{
+    display: none;
+}
+
+/* media queries */
+@media screen and (max-width:769px), screen and (max-width:1024px){
+    .sideSection{
+        width:30%; 
+    }
+    
+    .mainSection{
+        width:70%;
+    }
+
+    .booking_details p{
+        font-size: 16px !important;
+    }
+}
+
+@media screen and (max-width:481px), screen and (max-width:768px){
+    .sideSection{
+        width:40%; 
+    }
+    
+    .mainSection{
+        width:60%;
+    }
+
+    .booking_details p{
+        font-size: 14px !important;
+    }
+
+    .button-content{
+        display: none !important;
+    }
+    
+    .button-icon{
+        display: inline-block !important;
+    }
+}
+
+@media screen and (max-width:320px), screen and (max-width:480px){
+    .container{
+        display: block;
+    }
+    .sideSection{
+        width:100%;
+    }
+    
+    .mainSection{
+        width: 100%;
+    }
+
+    .sideSection{
+        height: 100% !important; 
+    }
+
+    .booking_details p{
+        font-size: 14px !important;
+    }
+
+    .button-content{
+        display: none !important;
+    }
+    
+    .button-icon{
+        display: inline-block !important;
+    }
+    #proxy_image{
+        display: none;
+    }
+}
