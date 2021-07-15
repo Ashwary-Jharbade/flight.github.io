@@ -440,7 +440,11 @@ img{
     #proxy_image{
 	    margin: 40px auto;
 	    width: 90%;
-	}
+    }
+	
+    .slider{
+	width: 83% !important;
+    }
 
     .booking_details p{
         font-size: 14px !important;
@@ -469,6 +473,10 @@ img{
 
     .sideSection{
         height: 100% !important; 
+    }
+	
+    .slider{
+	width: 85% !important;
     }
 
     .booking_details p{
