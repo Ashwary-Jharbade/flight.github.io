@@ -427,15 +427,25 @@ img{
     .booking_details p{
         font-size: 16px !important;
     }
+
+    .stationDetails{
+	    width: 60%;
+	    padding: 15px;
+	}
+
+	.timeDetails{
+	    width: 40%;
+	    padding: 15px;
+	}
 }
 
 @media screen and (max-width:481px), screen and (max-width:768px){
     .sideSection{
-        width:40%; 
+        width:45%; 
     }
     
     .mainSection{
-        width:60%;
+        width:55%;
     }
 
     .booking_details p{
@@ -445,11 +455,42 @@ img{
     .button-content{
         display: none !important;
     }
+
+    .timeDetails{
+    	width: 80% !important;
+    	padding: 0 5px 10px 10px;
+    }
+
+    .stationDetails{
+    	width: 80% !important;
+    	padding: 10px 5px 10px 10px;
+    }
+
+    .resultFor{
+    	width: 100%;
+    	flex-direction: column !important;
+    }
+
     
     .button-icon{
         display: inline-block !important;
     }
+
+    .slider{
+    	width: 82% !important;
+    }
+
+    #proxy_image{
+	    margin: 40px auto;
+	    width: 80%;
+	}
 }
+
+@media screen and (max-width:586px ){
+	.button-icon{
+		display: none !important;
+	}
+}	
 
 @media screen and (max-width:320px), screen and (max-width:480px){
     .container{
@@ -480,5 +521,9 @@ img{
     }
     #proxy_image{
         display: none;
+    }
+
+    .slider{
+    	width: 85% !important;
     }
 }
