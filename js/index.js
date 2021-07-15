@@ -96,6 +96,7 @@ var price;
 // on page load function
 window.onload = (event) => {
     document.getElementById('price_meter').innerHTML = 5000;
+    document.getElementById('timeDetails').style.display = "none";
 };
 
 // function display flight cards on the page
@@ -346,6 +347,7 @@ function priceChange(ele){
 // function collect data from form store them globally
 function flightSearch(event){
     event.preventDefault()
+    document.getElementById('timeDetails').style.display = "Block";
     try{
         document.getElementById('proxy_image').style.display = 'None'
     }
