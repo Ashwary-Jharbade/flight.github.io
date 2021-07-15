@@ -436,6 +436,11 @@ img{
     .mainSection{
         width:60%;
     }
+    
+    #proxy_image{
+	    margin: 40px auto;
+	    width: 90%;
+	}
 
     .booking_details p{
         font-size: 14px !important;
