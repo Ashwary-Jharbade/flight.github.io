@@ -217,77 +217,69 @@ nav{
 }
 
 .slider{
-    padding: 15px;
-    width: 85%;
-    -webkit-appearance: none;
-    outline: none;
+	-webkit-appearance: none;
+	margin:25px 15px;
+	width: 85%;
+	height: 7px;
+	background: var(--orangedark);
+	border-radius: 5px;
+	background-image: linear-gradient(#003b80,#003b80);
+	background-size: 45% 100%;
+	background-repeat: no-repeat;
+	outline: none;
 }
 
 .slider::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
     width: 100%;
-    height: 7px;
     cursor: pointer;
-    background: var(--buttonColor);
-    border-radius: 5px;
+	background: transparent;
+	border-radius: 5px;
 }
 
 .slider::-webkit-slider-thumb {
-    position: relative;
-    top: 10px;
+	-webkit-appearance: none;
+	position: relative;
+    top: -6px;
     height: 16px;
     width: 16px;
-    border-radius: 100%;
-    background: var(--darkButtonColor);
-    cursor: pointer;
-    -webkit-appearance: none;
-    margin-top: -14px;
-    border-color: transparent;
-}
-
-.slider:focus::-webkit-slider-runnable-track {
-    background: var(--buttonColor);
+	border-radius: 50%;
+	background: var(--darkButtonColor);
+	cursor: pointer;
 }
 
 .slider::-moz-range-track {
     width: 100%;
-    height: 7px;
     cursor: pointer;
-    background: var(--buttonColor);
-    border-radius: 5px;
+	background: transparent;
+	border-radius: 5px;
 }
 
 .slider::-moz-range-thumb {
     position: relative;
-    top: 10px;
+    top: -6px;
     height: 16px;
     width: 16px;
-    border-radius: 100%;
-    background: var(--darkButtonColor);
-    cursor: pointer;
-    -webkit-appearance: none;
-    margin-top: -14px;
-    border-color: transparent;
+	border-radius: 50%;
+	background: var(--darkButtonColor);
+	cursor: pointer;
 }
 
 .slider::-ms-track {
     width: 100%;
-    height: 7px;
     cursor: pointer;
-    background: var(--buttonColor);
-    border-radius: 5px;
+	background: transparent;
+	border-radius: 5px;
 }
 
 .slider::-ms-thumb {
     position: relative;
-    top: 10px;
+    top: -6px;
     height: 16px;
     width: 16px;
-    border-radius: 100%;
-    background: var(--darkButtonColor);
-    cursor: pointer;
-    -webkit-appearance: none;
-    margin-top: -14px;
-    border-color: transparent;
+	border-radius: 50%;
+	background: var(--darkButtonColor);
+	cursor: pointer;
 }
 
 
